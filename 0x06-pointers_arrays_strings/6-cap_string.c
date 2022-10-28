@@ -20,13 +20,12 @@ char *cap_string(char *s)
 		{
 			if (*(s + n) == cap_words[i])
 			{
-			   if (((s + (n + 1)) >= 97) && ((s + (n + 1)) <= 122))
-				   *(s + (n + 1)) = *(s + (n + 1)) - 32;
-			   break;
+				if ((*(s + (n + 1)) >= 97) && (*(s + (n + 1)) <= 122))
+					*(s + (n + 1)) = *(s + (n + 1)) - 32;
+				break;
 			}
 		}
 		n++;
 	}
 	return (s);
 }
-
